@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6" style="margin-top: 50px">
+<h2 class="text-center">Mail Sending Page..!!</h2>
+<hr>
+<form method="post">
+    <div class="col-sm-6">
+        {{ form.as_p }}
+{% csrf_token %}
+
+    {{ from.name.label_tag }}
+    {{ from.name.errors }}
+    {{ from.name }}
+</div>
+    <div class="col-sm-6">
+        {{ from.email.label_tag }}
+        {{ from.name.errors }}
+        {{ from.name }}
+    </div>
+    <div class="col-md-12">
+        {{ from.subject.label_tag }}
+        {{ from.subject.errors }}
+        {{ from.subject }}
+    </div>
+<div class="col-md-12">
+    {{ from.message.label_tag }}
+    {{ from.message.errors }}
+    {{ from.message }}
+</div>
+        <div class="col-sm-12" style="margin-top:20px">
+        <button type="submit" class="btn btn-primary" name="save">Submit</button>
+    </div>
+</form>
+</div>
+</div>
+</body>
+</html>
